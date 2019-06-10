@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="commonCss/loginHeader.css" />
+		<link rel="stylesheet" href="commonCss/rightNav.css" />
+		<link rel="stylesheet" href="commonCss/detailHeader.css" />
+		<link rel="stylesheet" href="commonCss/indexFooter.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="commonCss/listFooter.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/date.js"></script>
+		<script src="js/dateJcript.js "></script>
+	</head>
+
+	<body id="listBody">
+		<header></header>
+		<section id="detailNav" class="t"></section>
+		<section id="detailRightNav"></section>
+		<section id="listContent01">
+			<ul id="listContent01Left" class="l">
+				<li class="l listContent01Leftlist">
+					<h3>平板电脑频道</h3></li>
+				<li class="l listContent01Leftlist">
+					<h3>小新平板</h3><span>小新平板</span></li>
+				<li class="l listContent01Leftlist">
+					<h3>二合一笔记本</h3><span>D330 MIIX 4 Pro MIIX 4</span><br><span>D330 MIIX 4 Pro MIIX 4</span></li>
+				<li class="l listContent01Leftlist">
+					<h3>YOGA笔记本</h3><span>D330 MIIX 4 Pro MIIX 4</span><br><span>D330 MIIX 4 Pro MIIX 4</span></li>
+				<li class="l listContent01Leftlist">
+					<h3>联想平板电脑</h3><span>小新平板</span></li>
+				<li class="l listContent01Leftlist">
+					<h3>小新平板</h3><span>小新平板</span></li>
+			</ul>
+			<div id="listContent01Right" class="l">
+				<img class="bigPic" src="img/list/list-wheel02.jpg" />
+			</div>
+		</section>
+
+		<section id="listContent02">
+			<ul id="listContent02Right" class="l">
+			</ul>
+
+		</section>
+
+		<section id="listFooter" class="t"></section>
+		<footer id="indexFoot"></footer>
+		<script>
+			$('header').load("commonHtml/loginHeader.html");
+			$('footer').load("commonHtml/indexFooter.html");
+			$('#detailNav').load("commonHtml/detailHeader.html");
+			$('#detailRightNav').load("commonHtml/rightNav.html");
+			$('#listFooter').load("commonHtml/listFooter.html");
+
+			//吸顶效果
+			var oHeader = document.getElementById('detailNav');
+			console.log(oHeader)
+			document.onscroll = function() {
+				var top = document.documentElement.scrollTop;
+				console.log(top)
+				if(top > 56) {
+					oHeader.style.top = 0;
+					oHeader.style.position = 'fixed';
+				} else {
+					oHeader.style.position = 'static';
+				}
+			}
+		</script>
+	</body>
+
+</html>

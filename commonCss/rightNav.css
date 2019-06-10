@@ -1,0 +1,83 @@
+body{
+	height: 12000px;
+}
+#detailRightNav{
+	z-index: 2;
+	width: 48px;
+	height: 454px;
+	background-color: ghostwhite;
+	position: fixed;
+	right: 0;
+	top: 70px;
+}
+#detailRightNav ul li{
+	width: 48px;
+	height: 56px;
+	border: 1px solid gainsboro;
+	/*background-color: yellow;*/
+	border-bottom: none;
+	padding-top: 16px;
+	font-size: 14px;
+}
+#detailRightNav ul li:hover{
+	color: red;
+}
+#detailRightNav ul li:nth-child(6){
+	border-bottom:1px solid gray;
+	height: 70px;
+}
+#detailIconfont04{
+	padding: 12px;
+	font-size: 24px;
+}
+#detailIconfont04P{
+	display: block;
+	text-align: center;
+}
+#detailRightNav ul li:nth-child(7){
+	background-color: gainsboro;
+	height: 10px;
+}
+#listContent02{
+	width: 1280px;
+	margin-left: 60px;
+	height: 320px;
+	/*background-color: yellow;*/
+	margin-top: 40px;
+}
+#listContent02Right{
+	width: 1280px;
+	height: 320px;
+	
+}
+.listContent02RightBox{
+	width: 290px;
+	height: 318px;
+	border: 1px solid gainsboro;
+	margin-right: 10px;
+	margin-top: 30px;
+}
+#listContent02Right li:nth-child(3){
+	border-right: 1px solid gainsboro;
+}
+#listContent02Right a:hover,#listContent02Right02 a:hover{
+	text-decoration: none;
+	color: black;
+}
+.listContent02RightBoxImg{
+	width: 200px;
+	height: 230px;
+	margin-top: 14px;
+	margin-left: 20px;
+}
+#listContent02RightBoxP1,#listContent02RightBoxP2{
+	width: 290px;
+	height: 40px;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+}
+#listContent02RightBoxP2{
+	color: red;
+}
+

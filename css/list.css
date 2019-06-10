@@ -1,0 +1,51 @@
+#listBody {
+	height: 1830px;
+}
+
+#listContent01 {
+	width: 1280px;
+	height: 370px;
+	margin-left: 60px;
+}
+
+#listContent01Left {
+	width: 220px;
+	height: 364px;
+	margin-top: 6px;
+}
+
+.listContent01Leftlist {
+	width: 196px;
+	padding: 11px;
+	border: 1px solid gainsboro;
+	font-size: 12px;
+	border-top: none;
+}
+
+#listContent01 ul li:nth-child(1) {
+	border-top: 1px solid gainsboro;
+	background-color: gainsboro;
+}
+
+#listContent01Right {
+	width: 970px;
+	height: 370px;
+	background-color: pink;
+	margin-left: 10px;
+}
+
+#listContent01Right img {
+	width: 970px;
+	height: 370px;
+}
+
+.shadows:hover {
+	transform: scale(0.98);
+	box-shadow: 1px 1px 10px gray;
+	transition: 0.2s;
+	border: none;
+}
+
+#listContent02 {
+	height: 700px;
+}

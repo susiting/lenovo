@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录注册</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="commonCss/loginHeader.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+	</head>
+
+	<body id="loginBody">
+		<header>
+
+		</header>
+		<section id="content">
+			<div id="bigBox">
+				<p>联想会员</p>
+				<div id="box">
+					<div id="left" class="l">用户登录</div>
+					<div id="right" class="r">用户注册</div>
+				</div>
+				<ul id="bottom">
+					<li class="l">
+						<h1><input class="in l" placeholder="输入手机号"/></h1>
+						<p class="l" id="p2">请输入11位数字</p>
+					</li>
+					<li class="l">
+						<input class="in l" id="two" placeholder="短信认证码" />
+						<a href="#" id="test" class="l">获取认证码</a>
+						<p class="l" id="p2">格式不当，请重新输入</p>
+					</li>
+					<li class="l">
+						<input class="in l" type="password" placeholder="输入密码" />
+						<p class="l" id="p2">格式不当，请重新输入</p>
+					</li>
+					<li class="l">
+						<input class="in l" type="password" placeholder="再次输入密码" />
+						<p class="l" id="p2">格式不当，请重新输入</p>
+					</li>
+					<li class="l">
+						<input id="five" class="in l" value="立即注册" />
+					</li>
+				</ul>
+				<ul id="bottom2">
+					<li class="l">
+						<h1><input class="in2 l" placeholder="输入手机号"/></h1>
+						<p class="l" id="p2">请输入11位数字</p>
+					</li>
+					<li class="l">
+						<input class="in2 l" type="password" placeholder="输入密码" />
+					</li>
+					<li class="l">
+						<input id="five" class="in l" value="立即登录" />
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<script>
+			$('header').load("commonHtml/loginHeader.html");
+			$('.in').blur(function() {
+				var index = $('.in').index(this);
+				var value = $('.in').eq(index).val();
+				var reg;
+				switch(index) {
+					case 0:
+						reg = /^1\d{10}$/;
+						break;
+					case 1:
+						break;
+					case 2:
+						reg = /^\w{6,12}$/;
+						break;
+					case 3:
+						reg = /^\w{6,12}$/;
+						break;
+				}
+				checked(reg, value, index)
+			})
+			$('.in2').blur(function() {
+				var index = $('.in2').index(this);
+				var value = $('.in2').eq(index).val();
+				var reg;
+				switch(index) {
+					case 0:
+						reg = /^1\d{10}$/;
+						break;
+				}
+				checkeds(reg, value, index)
+			})
+
+			function checked(reg, value, index) {
+				var resulet = reg.test(value);
+				console.log(value, resulet, reg);
+				if(resulet == false) {
+					$('#bottom p').eq(index).css('color', 'orange');
+				} else {
+					$('#bottom p').eq(index).css('color', 'white');
+				}
+			}
+
+			function checkeds(reg, value, index) {
+				var resulet = reg.test(value);
+				console.log(value, resulet, reg);
+				if(resulet == false) {
+					$('#bottom2 p').eq(index).css('color', 'orange');
+				} else {
+					$('#bottom2 p').eq(index).css('color', 'white');
+				}
+			}
+
+			$('#right').click(function() {
+				if($('#bottom2').css('display') == 'block') {
+					$('#bottom2').css('display', 'none')
+					$('#bottom').css('display', 'block')
+					$('#right').css('color', 'red')
+					$('#left').css('color', 'black')
+				} else { 
+					$('#bottom').css('display', 'block')
+				}
+			})
+
+			$('#left').click(function() {
+				if($('#bottom').css('display') == 'block') {
+					$('#bottom').css('display', 'none')
+					$('#bottom2').css('display', 'block')
+					$('#right').css('color', 'black')
+					$('#left').css('color', 'red')
+				} else {
+					$('#bottom2').css('display', 'block')
+				}
+			})
+		</script>
+
+	</body>
+
+</html>
